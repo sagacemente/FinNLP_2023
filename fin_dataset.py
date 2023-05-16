@@ -42,6 +42,7 @@ class Fin_ds:
       self.ds = tf.data.Dataset.from_tensor_slices(( tf.convert_to_tensor(self.l_texts, dtype=tf.string), tf.convert_to_tensor(self.Y)))
       self.ds = tf.data.Dataset.from_tensor_slices(( self.l_texts, self.Y))
       print('ds created')
+      return self.ds, self.l_texts, self.l_labels, self.Y
     if self.train == False:
       f = requests.get(self.url)
       # The .json() method automatically parses the response into JSON.
@@ -55,6 +56,7 @@ class Fin_ds:
         title = sample['news_title']
         text = title + ' ' + text
         self.l_texts.append(text)
+       return self.l_texts
 
   def summarize_t5(self):
     self.l_summ = []
