@@ -38,7 +38,7 @@ class Fin_ds:
       lb = LabelBinarizer()
       lb.fit(self.labels)
       self.Y = lb.transform(self.labels)
-      self.Y = Y.reshape(-1,33).astype(np.float32)
+      self.Y = self.Y.reshape(-1,33).astype(np.float32)
       self.ds = tf.data.Dataset.from_tensor_slices(( tf.convert_to_tensor(self.l_texts, dtype=tf.string), tf.convert_to_tensor(self.Y)))
       self.ds = tf.data.Dataset.from_tensor_slices(( self.l_texts, self.Y))
     if self.train == False:
