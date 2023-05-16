@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 import re
-import request
+from urllib import request
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 class Fin_ds:  
