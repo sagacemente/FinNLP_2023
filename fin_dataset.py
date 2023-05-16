@@ -56,7 +56,7 @@ class Fin_ds:
         title = sample['news_title']
         text = title + ' ' + text
         self.l_texts.append(text)
-       return self.l_texts
+      return self.l_texts
 
   def summarize_t5(self):
     self.l_summ = []
