@@ -78,4 +78,4 @@ class Fin_ds:
     return self.l_summ  
 
   def build_ds(self):
-    self.fetch_ds_files()
+    self.fetch_data()
