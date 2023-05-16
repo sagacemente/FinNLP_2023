@@ -4,6 +4,7 @@ import pandas as pd
 import tensorflow as tf
 import re
 from urllib import request
+import requests 
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 class Fin_ds:  
